@@ -1,5 +1,24 @@
 # data-structures-and-algorithms
 
+## nth Fibonacci number (2 ways) - 4/16/2020
+Generate the nth Fibonacci number in two different ways. This function takes a non-negative integer as input and output an integer
+
+  ### Challege Description
+  Solve the problem in two different ways in 20 minutes.
+
+  ### Approach & Efficiency
+  * Approach1: Iterative method
+    * Initialize result array with [0, 1].
+    * Iterate over index from 2 to given input n. For each iteration, result[ i ] = result[i - 1] + result[i - 2].
+    * Return result[ n ] after finish iteration.
+  * Apporach2: recursive method
+    * For given input n, if n is equal to 0, then return 0.</br>If n is equal to 1, then return1.</br>If n is larger than 1, then return f(n-1) + f(n-2).
+    * Time complexity of iterative method is n (Linear).
+    * Test: Run command 'jest __tests__/nth-fibonacci.test.js' from root directory.
+
+  ### Solution
+  ![nth fibonacci](nth-fibonacci.png "nthFibonacci")</br>
+
 ## Array Binary Search - 4/15/2020
 Binary search a sorted array. This function takes a sorted array and a target number. If traget number exist, then return the index of target number in the arry. If not, then return -1.
 
