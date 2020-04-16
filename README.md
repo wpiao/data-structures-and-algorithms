@@ -17,7 +17,7 @@ Generate the nth Fibonacci number in two different ways. This function takes a n
     * Test: Run command 'jest __tests__/nth-fibonacci.test.js' from root directory.
 
   ### Solution
-  ![nth fibonacci](nth-fibonacci.png "nthFibonacci")</br>
+  ![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")</br>
 
 ## Array Binary Search - 4/15/2020
 Binary search a sorted array. This function takes a sorted array and a target number. If traget number exist, then return the index of target number in the arry. If not, then return -1.
