@@ -20,7 +20,7 @@ Implement Singly Linked List and its append, insertBefore, and insertAfter metho
   * Test: Run command 'jest ./__tests__/ll-insertions.test.js' from root directory.
 
   ### Solution
-  ![linked list insertions](assets/ll.insertions.png "ll-insertion")</br>
+  ![linked list insertions](assets/ll-insertions.png "ll-insertion")</br>
 
 ## Singly Linked List - 4/19/2020
 Implement Singly Linked List and its append, insert, includes, toString method
