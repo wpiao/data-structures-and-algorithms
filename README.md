@@ -1,9 +1,31 @@
 # data-structures-and-algorithms
 
+## Singly Linked List - 4/19/2020
+Implement Singly Linked List and its append, insert, includes, toString method
+
+  ### Challenge Description
+  Write unit test for all methods I created.
+
+  ### Approach & Efficiency
+  * Approach:
+  I created Node and Linked List class first and then created append method. I used while loop to traverse linked list and using traversing and append method to build result of the method.
+  * Time Complexity:
+    * append method: O(n)
+    * insert method: O(1)
+    * includes method: O(n)
+    * toString method: O(n)
+  * Test: Run command 'jest \_\_tests\_\_/linked-list.test.js' from root directory.
+
+  ### Linked List Methods
+  * append(value): add a node to the end of the linked list
+  * insert(value): insert a new head to the linked list
+  * includes(value): inspect if the value exists in the linked list
+  * toString(): returns a string that representing all the values in the linked list, formatted as: '{ 1 } -> { 2 } -> { 3 } -> NULL'.
+
 ## nth Fibonacci number (2 ways) - 4/16/2020
 Generate the nth Fibonacci number in two different ways. This function takes a non-negative integer as input and output an integer
 
-  ### Challege Description
+  ### Challenge Description
   Solve the problem in two different ways in 20 minutes.
 
   ### Approach & Efficiency
@@ -13,8 +35,8 @@ Generate the nth Fibonacci number in two different ways. This function takes a n
     * Return result[ n ] after finish iteration.
   * Apporach2: recursive method
     * For given input n, if n is equal to 0, then return 0.</br>If n is equal to 1, then return1.</br>If n is larger than 1, then return f(n-1) + f(n-2).
-    * Time complexity of iterative method is n (Linear).
-    * Test: Run command 'jest __tests__/nth-fibonacci.test.js' from root directory.
+  * Time complexity of iterative method is n (Linear).
+  * Test: Run command 'jest \_\_tests\_\_/nth-fibonacci.test.js' from root directory.
 
   ### Solution
   ![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")</br>
@@ -33,7 +55,7 @@ Binary search a sorted array. This function takes a sorted array and a target nu
     * If target number is larger than mid index number, then binary search only right portion of the array. 
     * If didn't find the target number, then return -1.
   * Time complexity of this approach is log n.
-  * Test: Run command 'jest __tests__/array-binary-search.test.js' from root directory.
+  * Test: Run command 'jest \_\_tests\_\_/array-binary-search.test.js' from root directory.
 
   ### Solution
   ![binary search](assets/array-binary-search.png "binarySearch")</br>
@@ -52,7 +74,7 @@ Function insertShiftArray takes an array and a value to be added. It adds value 
     * Iterate over second half of the array and add each element ot the result array.
     * return the result array.
   * Time complexity of this approach is n (linear).
-  * Test: Run command 'jest __tests__/array-shift.test.js' from root directory.
+  * Test: Run command 'jest \_\_tests\_\_/array-shift.test.js' from root directory.
 
   ### Solution
   ![insert and shift array](assets/array-shift.png "insertShiftArray")</br>
