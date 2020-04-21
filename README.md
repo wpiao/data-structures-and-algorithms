@@ -1,5 +1,27 @@
 # data-structures-and-algorithms
 
+## Linked List insertions - 4/20/2020
+Implement Singly Linked List and its append, insertBefore, and insertAfter method. Write unit test for all methods.
+
+  ### Challenge Description
+  Handle the edge cases. Make sure insertBefore could add a node before head and insertAfter could add a node after last node.
+
+  ### Approach & Efficiency
+  * Approach:
+    * Create Node class with value and next property
+    * Create Linked List class with head property
+    * append method: If it is empty Linked list then assign new node to head. If not, traverse to the last node and add new node to last node.
+    * insertBefore method: Traverse the linked list from head to last node and check if current node's value is equal to target value. If eqaul and if current node is head then make new node points at current node and make new node head. If equal and if current node is not head then make previous node points at new node and new node points at current node. If current node value is not equal to target value then move to the next node and do the above step.
+    * insertAfter method: Traverse the linked list from head to last node and check if current node's value is equal to target value. If equal and if current node is last node then make current node points at new node. If equal and if current node is not last node then make current node points at new node and new node points at next node. If current node value is not equal to target value then move to next node and do the above step.
+  * Time Complexity: 
+    * append method: O(n)
+    * insertBefore method: O(n)
+    * insertAfter method: O(n)
+  * Test: Run command 'jest ./__tests__/ll-insertions.test.js' from root directory.
+
+  ### Solution
+  ![linked list insertions](assets/ll.insertions.png "ll-insertion")</br>
+
 ## Singly Linked List - 4/19/2020
 Implement Singly Linked List and its append, insert, includes, toString method
 
