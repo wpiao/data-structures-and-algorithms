@@ -1,5 +1,23 @@
 # data-structures-and-algorithms
 
+## k-th value from the end of the linked list
+Implement Singly Linked List and its append and kthFromEnd method. Write unit test for all methods.
+
+  ### Challenge Description
+  Find k-th value from the end of the linked list not from start of the linked list. Since linked list is uni-directional so we can only traverse linked list from head to last node. I need to find a way to record each node's value in reverse order.
+
+  ### Approach & Efficiency
+  * Approach:
+    * Handle edge case. if k < 0, then return 'Exception'.
+    * Traverse LL from head to last node.
+    * unshifit current node's value to a temp array(initially empty) in each iteration.
+    * After finish traversing, if k < temp.length then return temp[ k ], else return 'Exception'.
+  * Time Complexity: O(n)
+  * Test: Run command 'jest \_\_tests\_\_/ll-kth-from-end.test.js --verbose --coverage' from root directory.
+
+  ### Solution
+  ![LL kth from end](assets/ll-kth-from-end.png "ll-kth-from-end")</br>
+
 ## Linked List insertions - 4/20/2020
 Implement Singly Linked List and its append, insertBefore, and insertAfter method. Write unit test for all methods.
 
@@ -8,8 +26,8 @@ Implement Singly Linked List and its append, insertBefore, and insertAfter metho
 
   ### Approach & Efficiency
   * Approach:
-    * Create Node class with value and next property
-    * Create Linked List class with head property
+    * Create Node class with value and next property.
+    * Create Linked List class with head property.
     * append method: If it is empty Linked list then assign new node to head. If not, traverse to the last node and add new node to last node.
     * insertBefore method: Traverse the linked list from head to last node and check if current node's value is equal to target value. If eqaul and if current node is head then make new node points at current node and make new node head. If equal and if current node is not head then make previous node points at new node and new node points at current node. If current node value is not equal to target value then move to the next node and do the above step.
     * insertAfter method: Traverse the linked list from head to last node and check if current node's value is equal to target value. If equal and if current node is last node then make current node points at new node. If equal and if current node is not last node then make current node points at new node and new node points at next node. If current node value is not equal to target value then move to next node and do the above step.
@@ -17,7 +35,7 @@ Implement Singly Linked List and its append, insertBefore, and insertAfter metho
     * append method: O(n)
     * insertBefore method: O(n)
     * insertAfter method: O(n)
-  * Test: Run command 'jest ./__tests__/ll-insertions.test.js' from root directory.
+  * Test: Run command 'jest \_\_tests\_\_/ll-insertions.test.js' from root directory.
 
   ### Solution
   ![linked list insertions](assets/ll-insertions.png "ll-insertion")</br>
