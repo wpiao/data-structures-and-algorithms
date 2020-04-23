@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 
-## k-th value from the end of the linked list
+## k-th value from the end of the linked list - 4/21/2020
 Implement Singly Linked List and its append and kthFromEnd method. Write unit test for all methods.
 
   ### Challenge Description
