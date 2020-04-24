@@ -1,5 +1,21 @@
 # data-structures-and-algorithms
 
+## Reverse a linked list - 4/23/2020
+Write a function that would reverse a given linked list. Do not use build-in method.
+
+  ### Challenge Description
+  Find a in-place solution without copy input linked list.
+
+  ### Approach & Efficiency
+  * Approach:
+    * Traversing over the linked list and storing a reference to a current node, its previous node, and its next node.
+    * In every iteration, after the next node is stored, the current’s node next pointer is pointed at the stored reference to the previous node. 
+  * Time Complexity: O(n).
+  * Test: Run command 'jest \_\_tests\_\_/reverseLL.test.js  --verbose --coverage' from root directory.
+
+  ### Solution
+  ![reverse linked list](assets/reverse-ll.png "reverse-ll")<br/>
+
 ## k-th value from the end of the linked list - 4/21/2020
 Implement Singly Linked List and its append and kthFromEnd method. Write unit test for all methods.
 
@@ -12,11 +28,11 @@ Implement Singly Linked List and its append and kthFromEnd method. Write unit te
     * Traverse LL from head to last node.
     * unshifit current node's value to a temp array(initially empty) in each iteration.
     * After finish traversing, if k < temp.length then return temp[ k ], else return 'Exception'.
-  * Time Complexity: O(n)
+  * Time Complexity: O(n).
   * Test: Run command 'jest \_\_tests\_\_/ll-kth-from-end.test.js --verbose --coverage' from root directory.
 
   ### Solution
-  ![LL kth from end](assets/ll-kth-from-end.png "ll-kth-from-end")</br>
+  ![LL kth from end](assets/ll-kth-from-end.png "ll-kth-from-end")<br/>
 
 ## Linked List insertions - 4/20/2020
 Implement Singly Linked List and its append, insertBefore, and insertAfter method. Write unit test for all methods.
@@ -38,7 +54,7 @@ Implement Singly Linked List and its append, insertBefore, and insertAfter metho
   * Test: Run command 'jest \_\_tests\_\_/ll-insertions.test.js' from root directory.
 
   ### Solution
-  ![linked list insertions](assets/ll-insertions.png "ll-insertion")</br>
+  ![linked list insertions](assets/ll-insertions.png "ll-insertion")<br/>
 
 ## Singly Linked List - 4/19/2020
 Implement Singly Linked List and its append, insert, includes, toString method
@@ -74,12 +90,12 @@ Generate the nth Fibonacci number in two different ways. This function takes a n
     * Iterate over index from 2 to given input n. For each iteration, result[ i ] = result[i - 1] + result[i - 2].
     * Return result[ n ] after finish iteration.
   * Apporach2: recursive method
-    * For given input n, if n is equal to 0, then return 0.</br>If n is equal to 1, then return1.</br>If n is larger than 1, then return f(n-1) + f(n-2).
+    * For given input n, if n is equal to 0, then return 0.<br/>If n is equal to 1, then return1.<br/>If n is larger than 1, then return f(n-1) + f(n-2).
   * Time complexity of iterative method is n (Linear).
   * Test: Run command 'jest \_\_tests\_\_/nth-fibonacci.test.js' from root directory.
 
   ### Solution
-  ![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")</br>
+  ![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")<br/>
 
 ## Array Binary Search - 4/15/2020
 Binary search a sorted array. This function takes a sorted array and a target number. If traget number exist, then return the index of target number in the arry. If not, then return -1.
@@ -98,7 +114,7 @@ Binary search a sorted array. This function takes a sorted array and a target nu
   * Test: Run command 'jest \_\_tests\_\_/array-binary-search.test.js' from root directory.
 
   ### Solution
-  ![binary search](assets/array-binary-search.png "binarySearch")</br>
+  ![binary search](assets/array-binary-search.png "binarySearch")<br/>
 
 ## Insert and shift an array in middle at index - 4/14/2020
 Function insertShiftArray takes an array and a value to be added. It adds value into the array in middle at index and outpus a new array.
@@ -117,7 +133,7 @@ Function insertShiftArray takes an array and a value to be added. It adds value 
   * Test: Run command 'jest \_\_tests\_\_/array-shift.test.js' from root directory.
 
   ### Solution
-  ![insert and shift array](assets/array-shift.png "insertShiftArray")</br>
+  ![insert and shift array](assets/array-shift.png "insertShiftArray")<br/>
 
 ## Reverse an Array - 4/13/2020
 Function reverseArray takes an array as an argument and it outputs an array with all the elements in original array in reversed order.
