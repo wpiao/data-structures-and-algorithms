@@ -1,5 +1,37 @@
 # data-structures-and-algorithms
 
+## Stack and Queue - 4/26/2020
+Implement Stack and Queue data structures by using Linked List. Write push, pop, peek, and isEmpty methods for Stack and write enqueque, dequeque, peek, and isEmpty method for Queue.
+
+  ### Challenge Description
+  Implement Stack and Queue by using Linked List not Array.
+
+  ### Approach & Efficiency
+  * Approach:
+    * Stack: has top property and initial value is null.
+      1. push method: If it is empty Stack, then points top at new node. If it is not empty Stack, then new node's next points at current top and then make top points at new node. Time Complexity: O(1).
+      2. pop method: If it is empty Stack, then return null. If it is not empty Stack, then return top's value and make top points at top's next node. Time Complexity: O(1).
+      3. peek method: If it is empty Stack, then return null. If it is not empty Stack, then return top's value. Time Complexity: O(1).
+      4. isEmpty method: If top is null, then return true, else return false. Time Complexity: O(1).
+    * Queue: has front and rear properties and both initial values are null.
+      1. enqueque method: If it is empty Queue, then points both front and rear at new node. If it is not empty Queue, then rear's next points at new node and then make rear point at new node. Time Complexity: O(1).
+      2. dequeque method: If it is empty Queue, then return null. If it is not empty Queue, then return front's value and make front points at front's next node. Time Complexity: O(1).
+      3. peek method: If it is empty Queue, then return null. If it is not empty Queue, then return front's value. Time Complexity: O(1).
+      4. isEmpty method: If front is null, then return true, else return false. Time Complexity: O(1).
+  * Test: Run command 'jest \_\_tests\_\_/stack-and-queue.test.js --verbose --coverage' from root directory. Test coverage is 100%.
+
+  ### Methods
+  * Stack: FILO
+    1. push method: Add a node and make it top. Time complexity is O(1).
+    2. pop method: Delete the top node and return its value. If it is empty Stack, then return null. Time complexity is O(1).
+    3. peek method: Return top node's value. If it is empty Stack, then return null. Time complexity is O(1).
+    4. isEmpty method: Return true if it is Empty Stack, return false if it is not. Time complexity is O(1).
+  * Queue: FIFO
+    1. enqueue method: Add a node in the rear. Time complexity is O(1).
+    2. dequeue method: Delete the front node and return its value. If it is empty Queue, then return null. Time complexity is O(1).
+    3. peek method: Return front node's value. If it is empty Queue, then return null. Time complexity is O(1).
+    4. isEmpty method: Return true if it is empty Queue, return false if it is not. Time complexity is O(1).
+
 ## Reverse a linked list - 4/23/2020
 Write a function that would reverse a given linked list. Do not use build-in method.
 

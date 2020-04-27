@@ -12,20 +12,12 @@ For example:
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => {
-  // Solution code here...
-  const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  if (typeof (input) === 'number') {
-    return true;
-  } else if (typeof (input) === 'string') {
-    for (let letter of input) {
-      if (number.indexOf(letter) !== -1) {
-        return true;
-      }
-    }
-    return false;
-  }
-};
+// regular expression: /pattern/modifier
+const isNum = (str) => {
+  const validator = /[1-9]/;
+  const result = validator.test(str);
+  return result;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -34,6 +26,12 @@ Write a function named isCapitalized that takes in a string. This function shoul
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
+// will come back later
+// const isCapitalized = (str) => {
+//   const validator = /([A-Z]\w+)/g
+//   const result = str.match(validator);
+//   return result;
+// }
 
 const isCapitalized = (str) => {
   // Solution code here...
@@ -58,16 +56,23 @@ CHALLENGE 3
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
+// const citiesAtoJ = (arr) => {
+//   // Solution code here...
+//   const result = [];
+//   arr.forEach((city) => {
+//     if (city.charCodeAt(0) >= 65 && city.charCodeAt(0) <= 74) {
+//       result.push(city);
+//     }
+//   });
+//   return result;
+// };
+
 const citiesAtoJ = (arr) => {
-  // Solution code here...
-  const result = [];
-  arr.forEach((city) => {
-    if (city.charCodeAt(0) >= 65 && city.charCodeAt(0) <= 74) {
-      result.push(city);
-    }
-  });
+  const str = arr.join(",");
+  const validator = /[A-J]\w+/g;
+  const result = str.match(validator);
   return result;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
