@@ -29,9 +29,9 @@ class BinaryTree {
   inOrder() { // left -> root -> right
     const results = [];
     const _walk = node => {
-      if (this.left) _walk(this.left);
+      if (node.left) _walk(node.left);
       results.push(node.value);
-      if (this.right) _walk(this.right);
+      if (node.right) _walk(node.right);
     }
 
     _walk(this.root);
@@ -41,15 +41,23 @@ class BinaryTree {
   postOrder() { // left -> right -> root
     const results = [];
     const _walk = node => {
-      if (this.left) _walk(this.left);
-      if (this.right) _walk(this.right);
+      if (node.left) _walk(node.left);
+      if (node.right) _walk(node.right);
       results.push(node.value);
-
-      _walk(this.root);
-      return results;
     }
 
-    
+    _walk(this.root);
+    return results;
+  }
+}
+
+class BinarySearchTree {
+  constructor(root = null) {
+    this.root = root;
+  }
+
+  add(node) {
+    // will complete it ASAP
   }
 }
 

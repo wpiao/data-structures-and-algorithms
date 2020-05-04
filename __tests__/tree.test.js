@@ -43,15 +43,28 @@ describe('Binary Tree Module', () => {
     expect(tree.root.right.right).toBeNull();
   });
 
+  let one = new Node(1);
+  let two = new Node(2);
+  let three = new Node(3);
+  let four = new Node(4);
+  let five = new Node(5);
+
+  one.left = two;
+  one.right = three;
+  three.left = four;
+  three.right = five;
+
+  const tree = new BinaryTree(one);
+
   it('can return a collection from a preorder traversal', () => {
-    //
+    expect(tree.preOrder()).toEqual([1,2,3,4,5]);
   });
 
   it('can return a collection from a inorder traversal', () => {
-    //
+    expect(tree.inOrder()).toEqual([2,1,4,3,5]);
   });
 
   it('can return a collection from a postorder traversal', () => {
-    //
+    expect(tree.postOrder()).toEqual([2,4,5,3,1]);
   });
 });
