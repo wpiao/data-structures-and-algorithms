@@ -1,5 +1,30 @@
 # data-structures-and-algorithms
 
+## Breadth First Search - 5/5/2020
+Breadth first search a binary tree. It searches a binary tree from top level to bottom level from left to right. Return a list of the values in the tree in the order they were encountered.
+
+  ### Challenge Description
+  The prompt confused me. It wants me to extend the binary tree class by adding bfs method. This method should not take any input just like preorder, inorder, and postorder method. But in prompt, it is said the method takes a tree as input. 
+
+  ### Approach & Efficiency
+  * Approach:
+    * If empty tree then return empty array.
+    * Else use Queue to track the order.
+      1. Enqueque root node to a Queue.
+      2. If queue's front exist, then excute 4 tasks.
+        1. Dequeque front node.
+        2. push dequequed node's value to results array.
+        3. If dequequed node has left node, then enqueque it to the Queue.
+        4. If dequequed node has right node, then enqueque it to the Queue.
+      3. Repeat step 2 until front doesn't exist.
+      4. Return results array.
+  * Time Complexity: O(n) since it needs to search the whole tree.
+  * Test: Run command `jest __tests__/breadth-first.test.js` from root directory.
+
+  ### Solution
+  ![breadth first search](assets/breadth-first-search.png "breadth-first-search")<br/>
+
+
 ## FizzBuzz Tree - 5/4/2020
 Conduct 'FizzBuzz' on a binary tree while traversing through it.
 * If the value is divisible by 3, replace the value with “Fizz”
