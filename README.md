@@ -12,10 +12,10 @@ Breadth first search a binary tree. It searches a binary tree from top level to 
     * Else use Queue to track the order.
       1. Enqueque root node to a Queue.
       2. If queue's front exist, then excute 4 tasks.
-        * Dequeque front node.
-        * push dequequed node's value to results array.
-        * If dequequed node has left node, then enqueque it to the Queue.
-        * If dequequed node has right node, then enqueque it to the Queue.
+          * Dequeque front node.
+          * push dequequed node's value to results array.
+          * If dequequed node has left node, then enqueque it to the Queue.
+          * If dequequed node has right node, then enqueque it to the Queue.
       3. Repeat step 2 until front doesn't exist.
       4. Return results array.
   * Time Complexity: O(n) since it needs to search the whole tree.
