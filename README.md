@@ -1,5 +1,38 @@
 # data-structures-and-algorithms
 
+## Binary Tree - 5/3/2020
+Implement Binary Tree data structure. Write preOrder, inOrder, and postOrder methods for Binary Tree.
+
+  ### Challenge Description
+  Tree is not linear data structre such as arrays or linked lists. Use recursive way to traverse from root node to last node is challenge for me.
+
+  ### Approach & Efficiency
+  * Approach:
+    * Preorder: root -> left -> right
+      1. create a _walk function, it needs to do three tasks in order.
+      2. push current node's value to results array.
+      3. if current node has left child, then pass left child node to _walk function.
+      4. if current node has right child, then pass right node to _walk function.
+      5. At last, return results array.
+    * Inorder: left -> root -> right
+      1. create a _walk function, it needs to do three tasks in order.
+      2. if current node has left child, then pass left child node to _walk function.
+      3. push current node's value to results array.
+      4. if current node has right child, then pass right node to _walk function.
+      5. At last, return results array.
+    * Postorder: left -> right -> root
+      1. create a _walk function, it needs to do three tasks in order.
+      2. if current node has left child, then pass left child node to _walk function.
+      3. if current node has right child, then pass right node to _walk function.
+      4. push current node's value to results array.
+      5. At last, return results array.
+  * Test: run command `jest __tests__/tree.test.js --verbose --coverage` from root directory.
+
+  ### Methods
+  1. preOrder method: start from root node and traverse node in root -> left -> right order and store each node's value in an array and return the array.
+  2. inOrder method: start from most left branch and traverse node in left -> root -> right order and store each node's value in an array and return the array.
+  3. postOrder method: start from most left branch and traverse node in left -> right -> root order and store each node's value in an array and return the array.
+
 ## Stack and Queue - 4/26/2020
 Implement Stack and Queue data structures by using Linked List. Write push, pop, peek, and isEmpty methods for Stack and write enqueque, dequeque, peek, and isEmpty method for Queue.
 
