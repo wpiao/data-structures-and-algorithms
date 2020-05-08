@@ -1,5 +1,29 @@
 # data-structures-and-algorithms
 
+## FizzBuzz Tree - 5/4/2020
+Conduct 'FizzBuzz' on a binary tree while traversing through it.
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+* If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+  ### Challenge Description
+  The prompt doesn't give clear instruction. It is said conduct 'FizzBuzz' on a tree not a binary tree. The tree I implemented in previous code challenge was binary tree, so I am going to conduct 'FizzBuzz' on a binary tree in this code challenge. The instruction 'create a new tree' confused me in the beginning since I thought I need to copy the original tree and then apply 'FizzBuzz' on a new tree and return new tree.
+
+  ### Approach & Efficiency
+  * Approach:
+    * if empty tree then return null.
+    * else traverse binary tree in preorder search pattern and modify each node's value properly. Create internal function fizzBuzz, it has three tasks in order.
+      1. inspect node.value and modify it properly based on the 'FizzBuzz' rule.
+      2. if node.left exists, pass it to fizzBuzz function.
+      3. if node.right exists, pass it to fizzBuzz function.
+    * return the tree.
+  * Time Complexity: O(n) because it needs to search the whole tree.
+  * Test: Run command `jest __tests__/fizz-buzz-tree.test.js --verbose` from root directory.
+
+  ### Solution
+  ![fizz buzz tree](assets/fizz-buzz-tree.png "fizz-buzz-tree")<br/>
+
 ## Binary Tree - 5/3/2020
 Implement Binary Tree data structure. Write preOrder, inOrder, and postOrder methods for Binary Tree.
 
