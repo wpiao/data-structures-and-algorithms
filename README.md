@@ -12,10 +12,10 @@ Breadth first search a binary tree. It searches a binary tree from top level to 
     * Else use Queue to track the order.
       1. Enqueque root node to a Queue.
       2. If queue's front exist, then excute 4 tasks.
-        1. Dequeque front node.
-        2. push dequequed node's value to results array.
-        3. If dequequed node has left node, then enqueque it to the Queue.
-        4. If dequequed node has right node, then enqueque it to the Queue.
+        * Dequeque front node.
+        * push dequequed node's value to results array.
+        * If dequequed node has left node, then enqueque it to the Queue.
+        * If dequequed node has right node, then enqueque it to the Queue.
       3. Repeat step 2 until front doesn't exist.
       4. Return results array.
   * Time Complexity: O(n) since it needs to search the whole tree.
@@ -100,7 +100,7 @@ Implement Stack and Queue data structures by using Linked List. Write push, pop,
       2. dequeque method: If it is empty Queue, then return null. If it is not empty Queue, then return front's value and make front points at front's next node. Time Complexity: O(1).
       3. peek method: If it is empty Queue, then return null. If it is not empty Queue, then return front's value. Time Complexity: O(1).
       4. isEmpty method: If front is null, then return true, else return false. Time Complexity: O(1).
-  * Test: Run command 'jest \_\_tests\_\_/stack-and-queue.test.js --verbose --coverage' from root directory. Test coverage is 100%.
+  * Test: Run command `jest __tests__/stack-and-queue.test.js --verbose --coverage` from root directory. Test coverage is 100%.
 
   ### Methods
   * Stack: FILO
@@ -125,7 +125,7 @@ Write a function that would reverse a given linked list. Do not use build-in met
     * Traversing over the linked list and storing a reference to a current node, its previous node, and its next node.
     * In every iteration, after the next node is stored, the current’s node next pointer is pointed at the stored reference to the previous node. 
   * Time Complexity: O(n).
-  * Test: Run command 'jest \_\_tests\_\_/reverseLL.test.js  --verbose --coverage' from root directory.
+  * Test: Run command `jest __tests__/reverseLL.test.js  --verbose --coverage` from root directory.
 
   ### Solution
   ![reverse linked list](assets/reverse-ll.png "reverse-ll")<br/>
@@ -143,7 +143,7 @@ Implement Singly Linked List and its append and kthFromEnd method. Write unit te
     * unshifit current node's value to a temp array(initially empty) in each iteration.
     * After finish traversing, if k < temp.length then return temp[ k ], else return 'Exception'.
   * Time Complexity: O(n).
-  * Test: Run command 'jest \_\_tests\_\_/ll-kth-from-end.test.js --verbose --coverage' from root directory.
+  * Test: Run command `jest __tests__/ll-kth-from-end.test.js --verbose --coverage` from root directory.
 
   ### Solution
   ![LL kth from end](assets/ll-kth-from-end.png "ll-kth-from-end")<br/>
@@ -165,7 +165,7 @@ Implement Singly Linked List and its append, insertBefore, and insertAfter metho
     * append method: O(n)
     * insertBefore method: O(n)
     * insertAfter method: O(n)
-  * Test: Run command 'jest \_\_tests\_\_/ll-insertions.test.js' from root directory.
+  * Test: Run command `jest __tests__/ll-insertions.test.js` from root directory.
 
   ### Solution
   ![linked list insertions](assets/ll-insertions.png "ll-insertion")<br/>
@@ -184,7 +184,7 @@ Implement Singly Linked List and its append, insert, includes, toString method
     * insert method: O(1)
     * includes method: O(n)
     * toString method: O(n)
-  * Test: Run command 'jest \_\_tests\_\_/linked-list.test.js' from root directory.
+  * Test: Run command `jest __tests__/linked-list.test.js` from root directory.
 
   ### Linked List Methods
   * append(value): add a node to the end of the linked list
@@ -206,7 +206,7 @@ Generate the nth Fibonacci number in two different ways. This function takes a n
   * Apporach2: recursive method
     * For given input n, if n is equal to 0, then return 0.<br/>If n is equal to 1, then return1.<br/>If n is larger than 1, then return f(n-1) + f(n-2).
   * Time complexity of iterative method is n (Linear).
-  * Test: Run command 'jest \_\_tests\_\_/nth-fibonacci.test.js' from root directory.
+  * Test: Run command `jest __tests__/nth-fibonacci.test.js` from root directory.
 
   ### Solution
   ![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")<br/>
@@ -225,7 +225,7 @@ Binary search a sorted array. This function takes a sorted array and a target nu
     * If target number is larger than mid index number, then binary search only right portion of the array. 
     * If didn't find the target number, then return -1.
   * Time complexity of this approach is log n.
-  * Test: Run command 'jest \_\_tests\_\_/array-binary-search.test.js' from root directory.
+  * Test: Run command `jest __tests__/array-binary-search.test.js` from root directory.
 
   ### Solution
   ![binary search](assets/array-binary-search.png "binarySearch")<br/>
@@ -244,7 +244,7 @@ Function insertShiftArray takes an array and a value to be added. It adds value 
     * Iterate over second half of the array and add each element ot the result array.
     * return the result array.
   * Time complexity of this approach is n (linear).
-  * Test: Run command 'jest \_\_tests\_\_/array-shift.test.js' from root directory.
+  * Test: Run command `jest __tests__/array-shift.test.js` from root directory.
 
   ### Solution
   ![insert and shift array](assets/array-shift.png "insertShiftArray")<br/>
