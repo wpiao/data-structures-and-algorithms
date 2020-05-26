@@ -27,8 +27,20 @@ class LL {
     }
   }
 
-  get() {
-    //
+  // when node stores array [key, value] as node value, if the given key exist, it will return value.
+  // this method is for hashtable get method
+  get(key) {
+    if (!this.head) {
+      return null;
+    } else {
+      const currentNode = this.head;
+      while (currentNode) {
+        if (currentNode.value[0] === key) {
+          return currentNode.value[1];
+        }
+      }
+      return null;
+    }
   }
 }
 
@@ -43,7 +55,7 @@ class HashTable {
   // hash method
   hash(key) {
     const index = key.split('').reduce((acc, cur) => {
-      acc += cur.charCodeAt(0);
+      return acc += cur.charCodeAt(0);
     }, 0) * 19 % this.size;
     return index;
   } 
@@ -64,11 +76,24 @@ class HashTable {
 
   // get method
   get(key) {
-    //
+    const index = this.hash(key);
+    if(!this.storage[index]) {
+      return null;
+    } else {
+      const ll = this.storage[index];
+      return ll.get(key);
+    }
   }
 
   // contains method
   contains(key) {
-    //
+    const value = this.get(key);
+    if (value) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
+
+module.exports = { Node, LL, HashTable };
