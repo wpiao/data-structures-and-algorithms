@@ -56,9 +56,9 @@ describe('Hashtable Module', () => {
     // create a collision
     const ht = new HashTable(1024);
     ht.add('alex7', 'alex7');
-    // ht.add('elax7', 'duplicate');
+    ht.add('elax7', 'duplicate');
 
     expect(ht.get('alex7')).toEqual('alex7');
-    // expect(ht.get('elax7')).toEqual('duplicate');
-  })
+    expect(ht.get('elax7')).toEqual('duplicate');
+  });
 });

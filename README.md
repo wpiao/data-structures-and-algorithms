@@ -1,5 +1,14 @@
 # data-structures-and-algorithms
 
+## Hashtable - 5/25/2020  
+Implement Hashtable and add, get, contains, and hash methods. 
+
+  ### Challenge Description 
+  Come up with a proper hash algorithm.
+
+  ### Approach & Efficiency 
+  
+
 ## Breadth First Search - 5/5/2020
 Breadth first search a binary tree. It searches a binary tree from top level to bottom level from left to right. Return a list of the values in the tree in the order they were encountered.
 

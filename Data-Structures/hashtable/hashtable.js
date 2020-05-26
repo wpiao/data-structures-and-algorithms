@@ -33,11 +33,12 @@ class LL {
     if (!this.head) {
       return null;
     } else {
-      const currentNode = this.head;
+      let currentNode = this.head;
       while (currentNode) {
         if (currentNode.value[0] === key) {
           return currentNode.value[1];
         }
+        currentNode = currentNode.next;
       }
       return null;
     }
