@@ -52,13 +52,30 @@ describe('Hashtable Module', () => {
     expect(ht.get('alex6')).toBeNull();
   });
 
-  it('should successfully handle a collision within the hashtable', () => {
+  it('should successfully handle a collision within the hashtable and should successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
     // create a collision
     const ht = new HashTable(1024);
     ht.add('alex7', 'alex7');
     ht.add('elax7', 'duplicate');
 
+    expect(ht.hash('alex7')).toEqual(ht.hash('elax7'));
     expect(ht.get('alex7')).toEqual('alex7');
     expect(ht.get('elax7')).toEqual('duplicate');
   });
+
+  it('should successfully hash a key to in-range value', () => {
+    const ht = new HashTable(5);
+    const hash1 = ht.hash('sdfewr');
+    const hash2 = ht.hash('ghjiw');
+    const hash3 = ht.hash('uiojbvc');
+    const hash4 = ht.hash('oukcbuwe');
+    const hash5 = ht.hash('ijckbuwh');
+
+    expect(hash1 >= 0 && hash1 < 5).toEqual(true);
+    expect(hash2 >= 0 && hash2 < 5).toEqual(true);
+    expect(hash3 >= 0 && hash3 < 5).toEqual(true);
+    expect(hash4 >= 0 && hash4 < 5).toEqual(true);
+    expect(hash5 >= 0 && hash5 < 5).toEqual(true);
+  })
+  
 });
