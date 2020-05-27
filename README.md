@@ -1,5 +1,37 @@
 # data-structures-and-algorithms
 
+## Hashtable - 5/25/2020  
+Implement Hashtable and add, get, contains, and hash methods. 
+
+  ### Challenge Description 
+  Come up with a proper hash algorithm.
+
+  ### Approach & Efficiency 
+  * Approach: 
+    1. Implement hash method that generates an index for a given key. Add up all letter's ASCII value in the key and multiply a prime number and then modulo with storage array size.
+    2. Store a given key/value pair at index produced by hash method in the storage array.
+      * If the index at the storage array is not defined, then make a linked list and add given key/value pair to the head of the linked list and store linked list at index in the storage array.
+      * If the index at the storage array is defined, then add given key/value pair to the head of the linked list that already stored in the storage array.
+  * Time Complexity:  
+    * Adding a key/value pair is O(1).
+    * Accessing/Reading a key/value pair is O(1).
+  * Test: Run command `jest __tests__/hashtable.test.js --verbose --coverage` from root directory.
+
+  ### Methods 
+  * Add()<br/>
+  When adding a new key-value pair to a hashtable:  
+    1. send the key to the GetHash method.
+    2. Once you determine the index of where it should be placed, go to that index.
+    3. Check if something exists at that index already, if it doesn't, add it with the key-value pair.
+    4. If something does exist, add the new key-value pair to the data structure within that bucket.
+  * Find()<br/>
+  This method takes in a key, gets the `hash` and goes to index location specified. Once at the index location is found in the array, it would iterate through the bucket and see if the key exists and return the value.
+  * Contains()<br/>
+  This method accepts a key and return a boolean on if that key exists inside the hashtable. The best way to do this is to have the contains call the `getHash` function and check the hashtable if the key exists in the table given the index returned.
+  * GetHash()<br/>
+  This method takes a key as a string, conduct the hash and then return index of the array where the key-value should be placed.
+  
+
 ## Breadth First Search - 5/5/2020
 Breadth first search a binary tree. It searches a binary tree from top level to bottom level from left to right. Return a list of the values in the tree in the order they were encountered.
 
