@@ -1,5 +1,25 @@
 # data-structures-and-algorithms
 
+## First Repeated Word - 5/26/2020  
+Find the first repeated word in a book. Write a function that takes a string as input and return first repeated word in the input.  
+
+  ### Challenge Description 
+  This code challenge is not hard. I just needed to see regular expression reference for the syntax and method. 
+
+  ### Approach & Efficiency 
+  * Approach: 
+    1. Handle edge cases first. If the input is not string, then return null. If the input is empty string, then return `no repeated word`. 
+    2. If the input is string and not empty, then split input by words and store them in an array.  
+    3. Iterate over the array, check if the current word appears in an array that sliced from next index to the end in the original array.  
+      * If appears, then return current word.
+      * Else, return `no repeated word`.  
+  * Time complexity: O(n) since it iterates over an array.
+  * Test: Run command `jest __tests__/repeated-word.test.js --verbose --coverage` from the root directory.  
+
+  ### Solution
+  ![first repeated word](assets/first-repeated-word.png "first-repeated-word")<br/>
+
+
 ## Hashtable - 5/25/2020  
 Implement Hashtable and add, get, contains, and hash methods. 
 
