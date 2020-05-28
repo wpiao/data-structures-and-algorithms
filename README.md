@@ -1,5 +1,26 @@
 # data-structures-and-algorithms
 
+## Find common values in 2 Binary Trees - 5/27/2020 
+Write a function called treeIntersection that takes two binary tree and return an array with all common values between two binary trees.  
+
+  ### Challenge Description 
+  Choose a data structure to store tree's value when traversing the tree. I chose to use object since it is O(1) operation when lookup key/value pair.  
+
+  ### Approach & Efficiency 
+  * Approach: 
+    1. Initiate result array with an empty array.
+    2. Traverse over tree1 and store each node value in an empty object - values1.  
+    3. Traverse over tree2 and lookup if each node value is in values1 object.  
+      * If is, push that value to the result array.
+      * Else, continue traversing.  
+    4. Return result array.
+  * Time Complexity: O(n) since it travers over the trees.  
+  * Test: Run command `jest __tests__/tree-intersection.test.js --verbose --coverage` from root directory.  
+
+  ### Solution  
+  ![tree intersection](assets/tree-intersection.png "tree-intersection")<br/> 
+
+
 ## First Repeated Word - 5/26/2020  
 Find the first repeated word in a book. Write a function that takes a string as input and return first repeated word in the input.  
 
