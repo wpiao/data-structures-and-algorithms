@@ -38,7 +38,7 @@ describe('Find common values in two binary tree', () => {
   root2.left = six;
   root2.right = seven;
   six.left = new Node(2);
-  seven.right = new Node(3);
+  seven.right = new Node(4);
   const tree2 = new BinaryTree(root2);
 
   // tree3
@@ -55,7 +55,7 @@ describe('Find common values in two binary tree', () => {
   });
 
   it('should return common values of two binary tree', () => {
-    expect(treeIntersection(tree1, tree2)).toEqual([1, 2, 3]);
+    expect(treeIntersection(tree1, tree2)).toEqual([3, 2, 4]);
   });
 
   it('should return an empty array if there is no common values between two binary tree', () => {
