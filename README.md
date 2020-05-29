@@ -1,4 +1,30 @@
-# data-structures-and-algorithms
+# data-structures-and-algorithms  
+
+## Left Join for 2 Hashtables - 5/28/2020 
+Implement a simplified LEFT JOIN for 2 Hashtables. The function takes two parameters. The first parameter is a hashtable that has word strings as keys, and a synonym of the key as values. The second parameter is a hashtable that has word strings as keys, and antonyms of the key as values. LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row. If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.  
+
+  ### Challenge Description 
+  The prompt missed some details. There are a lot of ways to implement hashtable. I don't know what my input hashtables look like. I assumed it uses Linked List to handle collision issue. I was also not sure if I was allowed to use hashtable's internal methods such as hash, get, contains, which make it easier to solve the problem. So I didn't use any internal hashtable methods for this code challenge.  
+
+  ### Approach & Efficiency 
+  * Approach: 
+    1. Create a helper function that store all HT values in an object.  
+      * Iterate over HT's storage array.  
+        * If current element is undefined, then continue iterating. 
+        * Else, Traverse LL in current element, store all its values in an object.  
+      Return the object that holds the HT's value.  
+    2. Pass HT1 to helper function to get record1 - holds all HT1 values in the record1 object. 
+    3. Pass HT2 to helper function to get record2 - holds all HT2 values in the record2 object. 
+    4. Iterate over record1, check if each key is in the record2. 
+      * If is, append record2's value to current record1's value. 
+      * Else, append null to current record1's value. 
+    5. Return record1.  
+  * Time Complexity: O(n).  
+  * Test: Run command `jest __tests__/leftJoin.test.js --verbose --coverage` from root directory. 
+
+  ### Solution  
+  ![left join](assets/left-join.png "left-join")<br/> 
+  
 
 ## Find common values in 2 Binary Trees - 5/27/2020 
 Write a function called treeIntersection that takes two binary tree and return an array with all common values between two binary trees.  
