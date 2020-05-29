@@ -1,7 +1,7 @@
 'use strict';
 
 const leftJoin = (ht1, ht2) => {
-  // inner function that record all values of the hashtable in an object
+  // inner function that store all values of the hashtable in an object
   const record = ht => {
     // iterate over hashtable and record all values in an object
     const values = {};
@@ -14,8 +14,10 @@ const leftJoin = (ht1, ht2) => {
           const key = currentNode.value[0];
           const value = currentNode.value[1];
           if (values[key]) {
+            // if the key already exist, then push value to the current array
             values[key].push(value);
           } else {
+            // if the key doesn't exist, then add value to the empty array
             values[key] = [value];
           }
           currentNode = currentNode.next;
@@ -24,8 +26,22 @@ const leftJoin = (ht1, ht2) => {
     }
     return values;
   }
+
   // pass ht1 to inner function to store all its values to an object
   const record1 = record(ht1);
+  // pass ht2 to inner function to store all its values to an object
+  const record2 = record(ht2);
+
+  // iterate over record1, check if each key in the record1 is in record2
+  for (let key in record1) {
+    if (record2[key]) {
+      record1[key] = [...record1[key], ...record2[key]];
+    } else {
+      record1[key].push(null);
+    }
+  }
+
+  // return record1
   return record1;
 }
 
