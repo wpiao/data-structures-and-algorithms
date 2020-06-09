@@ -1,5 +1,36 @@
 # data-structures-and-algorithms  
 
+## Identify Anagrams - 6/8/2020 
+Write a function to validate whether or not two given strings are anagrams (contain the same letters).  
+
+  ### Challenge Description 
+  Find best solutions.  
+
+  ### Approach & Efficiencies 
+  * Approach: 
+    1. Create helper function -> stores input str's letters in an empty object. 
+      * make input str lowercase -> lower 
+      * store <- {}
+      * iterate over lower, store each letter into store object 
+    2. Pass two input strings to helper function respectfully 
+      * helper(str1) -> store1  
+      * helper(str2) -> store2  
+    3. Compare store1 with store2 
+      * compare the # of properties 
+        * if not same -> return false 
+        * else iterate over store1  
+          * if current key in store1 is not defined in store2 -> return false 
+          * else compare the value for that key 
+            * if the value are not same -> return false 
+            * else -> continue iterating  
+      * return true 
+  * Time complexity: O(n) 
+  * Test: Run command `jest __tests__/is-anagram.test.js --verbose --coverage` from root directory  
+
+  ### Solution  
+  ![is anagrams](assets/is-anagrams.png "is-anagrams")<br/> 
+
+
 ## Left Join for 2 Hashtables - 5/28/2020 
 Implement a simplified LEFT JOIN for 2 Hashtables. The function takes two parameters. The first parameter is a hashtable that has word strings as keys, and a synonym of the key as values. The second parameter is a hashtable that has word strings as keys, and antonyms of the key as values. LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row. If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.  
 
