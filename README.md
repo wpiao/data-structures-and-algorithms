@@ -1,5 +1,33 @@
 # data-structures-and-algorithms
 
+## Convert a year to Roman Numerals - 6/10/2020
+
+Convert a year to Roman Numerals.
+
+### Challenge Description
+
+Find a optimal solution.
+
+### Approach & Efficiencies
+
+- Approach:
+  1. create two arrays (`rom`, `dec`) for roman letters and numeric value respectively, from highest to lowest. create result variable and assign empty string to it
+  2. iterate over `dec` array from highest to lowest
+  - if (current number === target number), return the letter in `rom` array at current index
+  - else if (current number < target number),
+    - result += `rom[current index]`
+    - target number -= current number
+    - if (current number <= target number)
+      - current index--
+    - else, continue iterating
+  - else, continue eterating
+- Time complexity: O(n)
+- Test: Run command `jest __tests__/conver-to-roman.test.js --verbose --coverage` from root directory
+
+### Solution
+
+![convert to roman](assets/convert-to-roman.png "convert-to-roman")<br/>
+
 ## Sanitize spaces in a URL - 6/9/2020
 
 Write a function to sanitize a url, by encoding all spaces (an illegal character) into `%20`, to hexidecimal value for a space, in the ISO-Latin character set.
