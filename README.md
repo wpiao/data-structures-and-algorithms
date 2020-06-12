@@ -1,5 +1,27 @@
 # data-structures-and-algorithms
 
+## Find largest product possible of 3 integers from within a list - 6/11/2020
+
+Write a function to identify the largest possible result of multiplying together some 3 numbers from an array of integers.
+
+### Challenge Description
+
+Consider input with negative numbers and find a optimal solution.
+
+### Approach & Efficiencies
+
+- Approach:
+  1. sort input array in ascending order
+  2. product1 <- product of last three number
+  3. product2 <- product of first two number and last number
+  4. compare product1 with product2 and return larger one
+- Time complexity: O(n) or O(log(n)) depends on sorting algorithm
+- Test: Run command `jest __tests__/largest-product.test.js --verbose --coverage` from root directory
+
+### Solution
+
+![largest product](assets/largest-product.png 'largest-product')<br/>
+
 ## Convert a year to Roman Numerals - 6/10/2020
 
 Convert a year to Roman Numerals.
@@ -26,7 +48,7 @@ Find a optimal solution.
 
 ### Solution
 
-![convert to roman](assets/convert-to-roman.png "convert-to-roman")<br/>
+![convert to roman](assets/convert-to-roman.png 'convert-to-roman')<br/>
 
 ## Sanitize spaces in a URL - 6/9/2020
 
@@ -49,7 +71,7 @@ Find a solution without iterating over input url.
 
 ### Solution
 
-![sanitize url](assets/sanitize-url.png "sanitize-url")<br/>
+![sanitize url](assets/sanitize-url.png 'sanitize-url')<br/>
 
 ## Identify Anagrams - 6/8/2020
 
@@ -83,7 +105,7 @@ Find best solutions.
 
 ### Solution
 
-![is anagrams](assets/is-anagrams.png "is-anagrams")<br/>
+![is anagrams](assets/is-anagrams.png 'is-anagrams')<br/>
 
 ## Left Join for 2 Hashtables - 5/28/2020
 
@@ -112,7 +134,7 @@ The prompt missed some details. There are a lot of ways to implement hashtable. 
 
 ### Solution
 
-![left join](assets/left-join.png "left-join")<br/>
+![left join](assets/left-join.png 'left-join')<br/>
 
 ## Find common values in 2 Binary Trees - 5/27/2020
 
@@ -136,7 +158,7 @@ Choose a data structure to store tree's value when traversing the tree. I chose 
 
 ### Solution
 
-![tree intersection](assets/tree-intersection.png "tree-intersection")<br/>
+![tree intersection](assets/tree-intersection.png 'tree-intersection')<br/>
 
 ## First Repeated Word - 5/26/2020
 
@@ -159,7 +181,7 @@ This code challenge is not hard. I just needed to see regular expression referen
 
 ### Solution
 
-![first repeated word](assets/first-repeated-word.png "first-repeated-word")<br/>
+![first repeated word](assets/first-repeated-word.png 'first-repeated-word')<br/>
 
 ## Hashtable - 5/25/2020
 
@@ -222,7 +244,7 @@ The prompt confused me. It wants me to extend the binary tree class by adding bf
 
 ### Solution
 
-![breadth first search](assets/breadth-first-search.png "breadth-first-search")<br/>
+![breadth first search](assets/breadth-first-search.png 'breadth-first-search')<br/>
 
 ## FizzBuzz Tree - 5/4/2020
 
@@ -251,7 +273,7 @@ Conduct 'FizzBuzz' on a binary tree while traversing through it.
 
   ### Solution
 
-  ![fizz buzz tree](assets/fizz-buzz-tree.png "fizz-buzz-tree")<br/>
+  ![fizz buzz tree](assets/fizz-buzz-tree.png 'fizz-buzz-tree')<br/>
 
 ## Binary Tree - 5/3/2020
 
@@ -344,7 +366,7 @@ Find a in-place solution without copy input linked list.
 
 ### Solution
 
-![reverse linked list](assets/reverse-ll.png "reverse-ll")<br/>
+![reverse linked list](assets/reverse-ll.png 'reverse-ll')<br/>
 
 ## k-th value from the end of the linked list - 4/21/2020
 
@@ -366,7 +388,7 @@ Find k-th value from the end of the linked list not from start of the linked lis
 
 ### Solution
 
-![LL kth from end](assets/ll-kth-from-end.png "ll-kth-from-end")<br/>
+![LL kth from end](assets/ll-kth-from-end.png 'll-kth-from-end')<br/>
 
 ## Linked List insertions - 4/20/2020
 
@@ -392,7 +414,7 @@ Handle the edge cases. Make sure insertBefore could add a node before head and i
 
 ### Solution
 
-![linked list insertions](assets/ll-insertions.png "ll-insertion")<br/>
+![linked list insertions](assets/ll-insertions.png 'll-insertion')<br/>
 
 ## Singly Linked List - 4/19/2020
 
@@ -441,7 +463,7 @@ Solve the problem in two different ways in 20 minutes.
 
 ### Solution
 
-![nth fibonacci](assets/nth-fibonacci.png "nthFibonacci")<br/>
+![nth fibonacci](assets/nth-fibonacci.png 'nthFibonacci')<br/>
 
 ## Array Binary Search - 4/15/2020
 
@@ -464,7 +486,7 @@ Implement binary search to achieve log n time complexity.
 
 ### Solution
 
-![binary search](assets/array-binary-search.png "binarySearch")<br/>
+![binary search](assets/array-binary-search.png 'binarySearch')<br/>
 
 ## Insert and shift an array in middle at index - 4/14/2020
 
@@ -487,7 +509,7 @@ Find a formular to get mid index for insert point that works both on even and od
 
 ### Solution
 
-![insert and shift array](assets/array-shift.png "insertShiftArray")<br/>
+![insert and shift array](assets/array-shift.png 'insertShiftArray')<br/>
 
 ## Reverse an Array - 4/13/2020
 
@@ -495,4 +517,4 @@ Function reverseArray takes an array as an argument and it outputs an array with
 
 ### Solution
 
-![reverse array](assets/array-reverse.png "reverseArray")
+![reverse array](assets/array-reverse.png 'reverseArray')
